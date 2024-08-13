@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-sankey.v0.12.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="risk-score">
+                <h2>Risk Score <span id="risk-score">45/100</span></h2>
+            </div>
+            <div class="findings-vs-resolved">
+                <h3>Findings vs Resolved</h3>
+                <canvas id="findingsChart"></canvas>
+                <div class="stats">
+                    <p>500 Findings <span class="increase">+230</span></p>
+                    <p>60 Resolved <span class="decrease">-5</span></p>
+                </div>
+            </div>
+            <div class="scanned-apps">
+                <h3>Scanned Apps</h3>
+                <p>New Apps: <span>30</span></p>
+                <p>Critical Findings: <span>500</span></p>
+                <p>No Scans: <span>15</span></p>
+                <p>Contribution: <span>30 apps</span></p>
+            </div>
+            <div class="organization-metrics">
+                <h3>Organization Metrics</h3>
+                <div class="chart-container">
+                    <canvas id="organizationMetricsChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="filters">
+                <div class="filter-bar">Teams  <span class="alert-count">3</span></div>
+                <div class="filter-bar">App Groups  <span class="alert-count">1</span></div>
+                <div class="filter-bar">Last 24h <span class="alert-count">2</span></div>
+                <div class="filter-bar">Type <span class="alert-count">4</span></div>
+                <div class="filter-bar">Severity <span class="alert-count">5</span></div>
+                <div class="filter-bar">Reachability <span class="alert-count">1</span></div>
+                <div class="filter-bar">Exploitability <span class="alert-count">2</span></div>
+            </div>
+            <div class="separator"></div>
+            <div class="sankey-chart">
+                <svg id="sankeyChart"></svg>
+            </div>
+            <div class="separator"></div>
+            <div class="findings-summary">
+                <h3>1500 Findings</h3>
+                <div class="separator-small"></div>
+                <div class="transparent-box">
+                    <div class="finding-details">
+                        <div class="finding-item">
+                            <p>Critical: <span>613</span></p>
+                            <p>High: <span>613</span></p>
+                            <p>Code: <span>210</span></p>
+                        </div>
+                        <div class="finding-item">
+                            <p>OSS: <span>100</span></p>
+                            <p>Reachable: <span>40</span></p>
+                            <p>Exploitable: <span>60</span></p>
+                            <p>Unreachable: <span>30</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

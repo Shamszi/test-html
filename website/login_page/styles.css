@@ -1,0 +1,147 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: url('6193485.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+.login-box {
+    background-color: rgba(26, 26, 26, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s ease-out;
+}
+
+.logo {
+    background-image: url('logo.png'); /* Replace with your logo image */
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    animation: fadeIn 2s ease-out;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    animation: fadeIn 2.5s ease-out;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    animation: fadeIn 3s ease-out;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: center;
+    animation: fadeIn 3.5s ease-out;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    width: 80%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    animation: fadeIn 4s ease-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    animation: fadeIn 4.5s ease-out;
+}
+
+.login-option {
+    background-color: #333333;
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30%;
+}
+
+.login-option.apple {
+    background-color: #000000;
+}
+
+.login-option.google {
+    background-color: #4285f4;
+}
+
+.login-option.cancel {
+    background-color: #ff0000;
+}
